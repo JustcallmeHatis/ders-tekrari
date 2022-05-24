@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      a:link {
+        color:darkgoldenrod;
+      }
+
+      a:visited {
+        color: red;
+        /* color: red; sadece rengi degisiyor visited'da*/
+      }
+
+      a:hover {
+        background-color: aqua;
+        color: rgb(153, 0, 255);
+        /* fare ile uzerine gelindiginde sonuc veriyor hover */
+      }
+
+      ul {
+        list-style: "🏞️";
+        /* list-style-type: "🏞️"; emojipedia.org tan buldum copy paste yapiyorsun */
+      }
+
+      /* b tagi gibi taglar inline, p tagi gibi blok taglar ise yanina bir sey almayanlardir. 
+        inline elemanlar genislik yukseklik padding marjin gibi degerler alamaz, 
+        sagina soluna onune arkasina baska degerler alabilir. 
+        div mesela blok elemandir cunku butun satiri kaplar diger blok elemanlar gibi 
+        display stili inline degeri block, block degeri inline ya da inline-block seklinde hybrid yapabilir ve
+        none ozelligi elemani gizler
+        span inline dir, div de blocktur; gorsellik katkilari yoktur
+        with genislik; height yukseklik %,px,vw,vh birim olarak kullanilir
+        gerekmedikce width ve height KULLANMA*/
+    </style>
+  </head>
+  <body>
+    <!--ul>li*4>a-->
+    <ul>
+      <li><a href="#">Ana Sayfa</a></li>
+      <li><a href="#">Hakkimizda</a></li>
+      <li><a href="#">Iletisim</a></li>
+      <li><a href="https://dropbox.com/">open dropbox</a></li>
+    </ul>
+    <!--hreflere # koymasinin sebebi ici bosken
+    tiklama ozelligi vermemis hoca o yuzden
+  doldurmus, normalde sadece link koyuyoruz -->
+  </body>
+</html>

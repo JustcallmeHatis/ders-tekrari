@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        text-align: justify;
+      }
+
+      ol {
+        font-size: larger;
+        font-style: italic;
+      }
+
+      p,
+      #second {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      /*"id" de "class" gibi, class i . ile id yi # ile cagiriyorsun */
+
+      ul li {
+        /*".first" koyarsan o da ayni neticeyi veriyor*/
+        /*"ul,li" dersen tum ul ve tum li lere uyguluyor ve baglaci gibi */
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      a:link {
+        /* tiklanmamis link */
+        color: rgb(231, 105, 105);
+      }
+
+      a:visited {
+        /* tiklanmis link */
+        color: rgb(5, 63, 44);
+      }
+
+      a:hover {
+        /* mouse linkteyken */
+        text-decoration: overline;
+      }
+
+      a:active {
+        /* linke sag tik yaparken */
+        background-color: indianred;
+      }
+
+      #third {
+        list-style: "✔️";
+      }
+
+      .fourth {
+        list-style: georgian;
+      }
+
+      .fifth {
+        list-style: upper-roman;
+      }
+
+      .sixth {
+        list-style-image: url(img/empire-list-style.jpg);
+        font-size: xx-large;
+      }
+
+      body {
+        background-image: url(img/sunflower.jpg);
+        /*default olarak resmi tekrar ediyor*/
+        /*background-repeat: no-repeat; dersen
+          sol ust kosede tek resim beliriyor*/
+        /*background-repeat: repeat-x; en ustte
+          yatay bir sekilde duruyor*/
+        background-repeat:no-repeat;
+        background-position: center right /*300px(x) 400px(y)*/
+        /*default degeri solda, ben pozisyonunu
+        degistirdim*/
+      }
+
+      /* ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        } varsayilan ayari kaldirma ornegi */
+    </style>
+  </head>
+  <body>
+    <h1 id="second">font-size: Yazının Büyüklüğü (Puntosu)</h1>
+
+    <ol>
+      <li>
+        pt : punto olarak belirtmek
+        <ul type="disc">
+          <li class="first">
+            Örneğin yazımızın 12 punto olması için yazmamız gereken komut: h2 {
+            font-size: 12pt; }
+          </li>
+        </ul>
+      </li>
+      <li>
+        px : piksel olarak belirtmek
+        <ul type="disc">
+          <li class="first">
+            14 piksellik bir yüksekliğe sahip yazı istiyorsak: h2 { font-size:
+            14px; }
+          </li>
+        </ul>
+      </li>
+      <li>
+        em : varsayılan yazı büyüklüğüne göre oranlamak
+        <ul type="disc">
+          <li class="first">
+            Varsayılan yazı tipinin %150 fazlasını EM ile belirtirsek: h2 {
+            font-size: 1.5em; }
+          </li>
+        </ul>
+      </li>
+      <li>
+        % : yüzde olarak belirtmek
+        <ul type="disc">
+          <li class="first">
+            Yukarıdaki örneği yüzde ile ifade etmek isteseydik: h2 { font-size:
+            150%; }
+          </li>
+        </ul>
+      </li>
+      <li>in : inç olarak belirtmek</li>
+      <li>cm : santim olarak belirtmek</li>
+      <li>mm : milimetre olarak belirtmek</li>
+    </ol>
+
+    <h2 id="second">CSS'de Renk İfadeleri</h2>
+
+    <p style="font-size: larger; font-style: italic">
+      CSS dosyamızda yer yer renkleri belirtmemiz gerekebilir. Bunun için
+      çeşitli yollar var. Bunlardan en çok kullanılan üç tanesi:
+    </p>
+
+    <ul style="background-color: #9edca9; width: fit-content">
+      <li class="first">Onaltılık (Hex) Renkler</li>
+      <li class="first">RGB (Kırmızı, Yeşil, Mavi) Renkler</li>
+      <li class="first">Tarayıcı Renk İsimleri</li>
+    </ul>
+
+    <p style="color: #c64545">
+      Onaltılık (Hex) Renkler: #000000 şeklinde önce diyez sonra 6 adet 0-9 ve
+      A-F değerleri alabilen sembollerden oluşur. Örneğin #404040 bir rengi
+      ifade etmektedir.
+    </p>
+    <p style="color: #798927">
+      Bu renk kodlarına resim işlem programlarınız yardımıyla (photoshop, paint
+      shop pro gibi) ulaşabilirsiniz.
+    </p>
+    <p style="color: #278939">
+      RGB (Kırmızı, Yeşil, Mavi) Renkler: Bir renk oluştururken kırmızı, yeşil
+      ve mavinin tonlarını belirterek renk oluşturmamızı sağlar. Örneğin rgb( 0,
+      0, 0 ) siyah rengi belirtir. Mavi bir renk elde etmek istediğimizde Red -
+      Green - Blue üçlemesinde en sonda yer alan mavinin değerini arttırmamız
+      yeterli olur. Yani rgb( 0, 0, 255 ) mavi rengi verir. Windows'daki Paint
+      Brush (MS Paint) programı ve diğer resim editörleri yardımıyla RGB
+      değerlerini alarak renk oluşturabilirsiniz.
+    </p>
+    <p style="color: #307d9a">
+      Tarayıcı Renk İsimleri: İngilizce olarak belirlenmiş bazı renk adlarını
+      yazarak renk elde edebilirsiniz. Örneğin white beyaz, black siyah, blue
+      mavi rengini verecektir.
+    </p>
+
+    <h2 id="second">Link Stilleri</h2>
+
+    <span id="second">Linkler dört farklı duruma sahiptir. Bunlar;</span>
+
+    <ul type="square">
+      <li><a href="https://dropbox.com/">Tap for Dropbox</a></li>
+      <li><a href="https://lms.techproeducation.com/">Tap for LMS</a></li>
+      <li><a href="https://discord.com/">Tap for Discord</a></li>
+      <li><a href="https://youtube.com/">Tap for Youtube</a></li>
+    </ul>
+
+    <h2 id="second">CSS Listeler (Lists)</h2>
+
+    <p>CSS liste özellikleri şunları yapmanızı sağlar:</p>
+
+    <ul id="third">
+      <li>Sıralı listeler için farklı liste öğesi işaretçileri ayarlama.</li>
+      <li>Sırasız listeler için farklı liste öğesi işaretçileri ayarlama.</li>
+      <li>Liste öğesi işaretçisi olarak bir resim ayarlama.</li>
+      <li>Listelere ve liste öğelerine arka plan renkleri ekleme.</li>
+    </ul>
+
+    <h2 id="second">Farklı Liste Öğesi İşaretçileri</h2>
+
+    <ol>
+      <li class="fourth">1st Example</li>
+      <li class="fifth">2nd Example</li>
+    </ol>
+
+    <ul class="sixth">
+      <li>Deneme</li>
+    </ul>
+
+    <h2 id="second">Varsayılan Ayarları Kaldırma</h2>
+
+    <p>
+      <b> <u> list-style-type:none özelliği,</u></b> işaretleri/maddeleri
+      kaldırmak için de kullanılabilir.
+      <em>
+        <u>
+          Listenin ayrıca varsayılan kenar boşluğa (margin) ve iç boşluğa
+          (padding) sahip olduğunu unutmayın. Bunu kaldırmak için ul veya ol
+          tagine margin:0 ve padding:0 eklemelisiniz.</u
+        ></em
+      >
+    </p>
+
+    <!--3 Degerli Padding de mumkun mesela 
+    padding: 50px 20px 30px; dedigimde yukarisindan
+    50px, sag ve solundan 20 px, asagisindan 
+    30px bosluk birakir -->
+
+    <!--Tek degerli padding kullaniminda mesela
+    padding:50px; her yonden 50px bosluk birakir-->
+
+    <h2 id="second">ZEMİN RESMİ TEKRARI</h2>
+
+    <p>
+      background-repeat özelliği zemine eklenen görselin tekrarlanma biçimini
+      kontrol etmek için kullanılır. Dört ayrı değer alır:
+    </p>
+
+    <ul type="circle">
+      <li>
+        <b> background-repeat:repeat;</b> (Görselin hem yatay olarak hem de
+        dikey olarak tekrar etmesini istiyorsak bu özelliği kullanırız. Bu
+        özellik yazılmasa bile CSS varsayılan olarak bunu yapacaktır.)
+      </li>
+      <li>
+        <b> background-repeat:no-repeat;</b> (Eklediğimiz görselin hiçbir
+        şekilde tekrar etmesini istemiyorsak bu özelliği kullanırız.)
+      </li>
+      <li>
+        <b> background-repeat:repeat-x;</b> (Eklediğimiz görsel yatay olarak
+        yani x ekseni boyunca tekrar etsin istiyorsak bu özelliği kullanırız.)
+      </li>
+      <li>
+        <b> background-repeat:repeat-y;</b> (Eklediğimiz görsel dikey olarak
+        yani y ekseni boyunca tekrar etsin istiyorsak bu özelliği kullanırız.)
+      </li>
+    </ul>
+
+    <h2 id="second">ZEMİN RESMİ POZİSYONU</h2>
+
+    <p>
+      <em> <u> "background-position"</u> </em> özelliği görselin sayfadaki
+      pozisyonunu belirler.
+      <b>
+        Dikey hizalamada üst (top), orta (center) ve alt (bottom) geçerli bir
+        pozisyonken;</b
+      >
+      <u>
+        yatay hizalamada sol (left), orta (center) ve sağ (right) geçerlidir.</u
+      >
+      Bu özellik için 11 ayrı değer bulunmaktadır.
+    </p>
+
+    <ol>
+      <li>
+        <u> background-position:top left;</u>(Bu bildirimi kullandığımızda
+        görselimiz üstün solunda yer alacak.)
+      </li>
+      <li>
+        <u> background-position:top center;</u>(Bu bildirimi kullandığımızda
+        görselimiz üstün ortasında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:top right;</u>(Bu bildirimi kullandığımızda
+        görselimiz üstün sağında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:center left;</u>(Bu bildirimi kullandığımızda
+        görselimiz ortanın solunda yer alacak.)
+      </li>
+      <li>
+        <u> background-position:center center;</u>(Bu bildirimi kullandığımızda
+        görselimiz ortanın ortasında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:center right;</u>(Bu bildirimi kullandığımızda
+        görselimiz ortanın sağında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:bottom left;</u>(Bu bildirimi kullandığımızda
+        görselimiz altın solunda yer alacak.)
+      </li>
+      <li>
+        <u> background-position:bottom center;</u>(Bu bildirimi kullandığımızda
+        görselimiz altın ortasında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:bottom right;</u>(Bu bildirimi kullandığımızda
+        görselimiz altın sağında yer alacak.)
+      </li>
+      <li>
+        <u> background-position:x% y%;</u>(Görselimize yatay ve dikey olarak
+        yüzde üzerinden pozisyon vermemizi sağlar. ilk yüzde yatayın, ikinci
+        yüzde ise dikeyin pozisyonudur. <b> Örnek: background-position:80% 55%;)</b>
+      </li>
+      <li>
+        <u> background-position:xpos ypos;</u>(Görselimize yatay ve dikey olarak pixel
+        bakımından pozisyon vermemizi sağlar. İlk pixel'li rakam yatayın, ikinci
+        pixel'li rakam ise dikeyin pozisyonudur. <b> Örnek:
+        background-position:150px 200px; )</b>
+      </li>
+    </ol>
+  </body>
+</html>
